@@ -1,19 +1,19 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-// import Authentication from './components/auth/authentication/Authentication';
-// import ErrorDetails from './components/service/errorDetails/ErrorDetails';
-// import Organization from './components/organization/Organization';
-// import Blueprint from './components/layout/blueprint/Blueprint';
-// import Services from './components/services/Services';
-// import Settings from './components/settings/Settings';
-// import Toast from './components/layout/toast/Toast';
-// import Service from './components/service/Service';
-// import Setup from './components/auth/setup/Setup';
+import Authentication from './components/auth/authentication/Authentication';
+import ErrorDetails from './components/service/errorDetails/ErrorDetails';
+import Organization from './components/organization/Organization';
+import Blueprint from './components/layout/blueprint/Blueprint';
+import Services from './components/services/Services';
+import Settings from './components/settings/Settings';
+import Toast from './components/layout/toast/Toast';
+import Service from './components/service/Service';
+import Setup from './components/auth/setup/Setup';
 
 const App = () => (
     <>
-        {/* <Switch>
+        <Switch>
             <Route path='/auth/signin' component={Authentication} />
             <Route path='/auth/signup' component={Authentication} />
             <Route path='/auth/setup' component={Setup} />
@@ -29,7 +29,7 @@ const App = () => (
             </Blueprint>
         </Switch>
         
-        <Toast /> */}
+        <Toast />
         <h1>hi</h1>
     </>
 );
