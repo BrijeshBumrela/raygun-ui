@@ -14,7 +14,7 @@ import Setup from './components/auth/setup/Setup';
 const App = () => (
     <>
         <Switch>
-            <Route path='/auth/signin' component={Authentication} />
+            <Route path='/auth/signin' component={Authentication}/>
             <Route path='/auth/signup' component={Authentication} />
             <Route path='/auth/setup' component={Setup} />
             
