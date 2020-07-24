@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import Stepper from 'components/UI/stepper/Stepper';
 import { Menu, Tab } from 'components/UI/menu/Menu';
 import Delete from './delete/Delete';
 import Invite from './invite/Invite';
@@ -21,8 +20,6 @@ const Organization = ({ history }) => {
     
     return (
         <>
-            <Stepper steps={['organization']} />
-            
             <div className={styling.header}>
                 <h5>Settings</h5>
                 <h1>{store.organization.name}</h1>

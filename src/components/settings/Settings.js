@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import { Menu, Tab } from 'components/UI/menu/Menu';
-import Stepper from 'components/UI/stepper/Stepper';
 import Personal from './personal/Personal';
 import Delete from './delete/Delete';
 
@@ -25,8 +24,6 @@ const Settings = ({ history }) => {
     
     return (
         <>
-            <Stepper steps={['settings']} />
-            
             <div className={styling.header}>
                 <h5>Settings</h5>
                 <h1>{store.firstName} {store.lastName}</h1>

@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Placeholder from 'components/UI/placeholder/Placeholder';
 import InputField from 'components/UI/inputField/InputField';
 import Dropdown from 'components/UI/dropdown/Dropdown';
-import Stepper from 'components/UI/stepper/Stepper';
 import Adapter from 'components/UI/adapter/Adapter';
 import Button from 'components/UI/button/Button';
 import Modal from 'components/UI/modal/Modal';
@@ -106,9 +105,8 @@ const Services = ({ history }) => {
         fetchAllServices();
     }, [fetchAllServices]);
     
-    
     // All available types with icon
-    const types = config.availableTypes.map(type => {
+    const types = config.availableTypes.filter(type => type.name !== 'custom').map(type => {
         const item = (
             <>
                 <Adapter type={type.name} size='small' />
@@ -116,10 +114,8 @@ const Services = ({ history }) => {
             </>
         
         );
-        
         return { key: item, value: type.name, id: type.name };
     });
-    
     
     const inputIsValid = name && type && config.regex.description.test(description);
     
@@ -157,8 +153,6 @@ const Services = ({ history }) => {
     
     return (
         <>
-            <Stepper steps={['services']} />
-            
             <section className={styling.header}>
                 <div>
                     <h5>{store.organization.name}</h5>
