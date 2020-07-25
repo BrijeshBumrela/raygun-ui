@@ -131,7 +131,9 @@ const ErrorDetails = ({ history, match }) => {
         fetchErrorDetails();
     }, [fetchErrorDetails]);
     
-    
+    const stacktrace1 = "ReferenceError: nonExistentFunction is not defined↵    at HTMLButtonElement.onclick (file:///run/media/coderdude/Adwait/Projects/ASE3/main/Dummy-Services-EAD/demo_browser_app/index.html:33:41)"
+    console.log(stacktrace);
+
     return (
         <>
             <div className={styling.bar}>
@@ -162,6 +164,7 @@ const ErrorDetails = ({ history, match }) => {
             
             <Graph data={evolution} firstSeen={timestamp} lastSeen={lastSeen} />
             
+
             <Stacktrace snippet={snippet} stacktrace={stacktrace} path={path} line={line} />
             
             <UserInteractions userInteractions={userInteractions} errorMessage={message} />

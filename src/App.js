@@ -30,7 +30,6 @@ const App = () => (
         </Switch>
         
         <Toast />
-        <h1>hi</h1>
     </>
 );
 
